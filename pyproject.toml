@@ -6,8 +6,8 @@ authors = ["Your Name <you@example.com>"]
 readme = "README.md"
 
 packages = [
-    { include = "typeannotations.basic" },
-    { include = "typeannotations.intermediate" }
+    { include = "basic" },
+    { include = "intermediate" }
 ]
 
 [tool.poetry.dependencies]

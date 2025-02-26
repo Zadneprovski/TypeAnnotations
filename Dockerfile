@@ -8,10 +8,12 @@ WORKDIR /app
 COPY . .
 
 # Устанавливаем зависимости проекта
-RUN pip install poetry && poetry install
+RUN pip install poetry
+
+RUN poetry install
 
 # Устанавливаем mypy для проверки типов
 RUN poetry add --dev mypy
 
 # Команда по умолчанию для запуска контейнера (опционально)
-CMD ["poetry", "run", "mypy", "typeannotations"]
+CMD ["poetry", "run", "mypy", "."]
